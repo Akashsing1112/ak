@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">import React from "react";</p>
+<p class="p1">import { Card, CardContent } from "@/components/ui/card";</p>
+<p class="p1">import { Button } from "@/components/ui/button";</p>
+<p class="p1">import { Input } from "@/components/ui/input";</p>
+<p class="p1">import { Textarea } from "@/components/ui/textarea";</p>
+<p class="p1">import { UploadCloud, Search } from "lucide-react";</p>
+<p class="p2"><br></p>
+<p class="p1">export default function HomePage() {</p>
+<p class="p1"><span class="Apple-converted-space">  </span>return (</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div className="min-h-screen bg-white text-gray-900 p-4 md:p-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;header className="flex justify-between items-center mb-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 className="text-2xl font-bold text-blue-600"&gt;Bharat Reviews&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div className="flex gap-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;Input placeholder="Search businesses..." className="w-64" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;Button variant="default"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;Search className="h-4 w-4 mr-2" /&gt;Search</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/Button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;section className="mb-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 className="text-xl font-semibold mb-4"&gt;Post a Review&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;Card className="max-w-2xl"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;CardContent className="space-y-4 p-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;Input placeholder="Business Name" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;Textarea placeholder="Write your experience here..." /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div className="space-y-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;label className="font-medium text-sm"&gt;Upload Invoice (Image/PDF)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;Input type="file" accept="image/*,.pdf" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;Button className="bg-blue-600 hover:bg-blue-700 text-white"&gt;Submit Review&lt;/Button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/CardContent&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/Card&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h2 className="text-xl font-semibold mb-4"&gt;Recent Reviews&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>{[1, 2, 3].map((review) =&gt; (</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;Card key={review}&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;CardContent className="p-4 space-y-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h3 className="font-semibold text-blue-700"&gt;Business Name #{review}&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p className="text-sm"&gt;"Very professional service, highly recommended!"&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span className="text-xs text-green-600 font-medium"&gt;Verified with Invoice&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/CardContent&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/Card&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>))}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>);</p>
+<p class="p1">}</p>
+</body>
+</html>
